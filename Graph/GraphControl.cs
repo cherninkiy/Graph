@@ -57,6 +57,7 @@ namespace Graph
 		public event EventHandler<AcceptNodeConnectionEventArgs>	ConnectionAdded;
 		public event EventHandler<AcceptNodeConnectionEventArgs>	ConnectionRemoving;
 		public event EventHandler<NodeConnectionEventArgs>			ConnectionRemoved;
+        public event EventHandler<AcceptElementLocationEventArgs>   ConnectionDropped;
 
         #region Zoom
 	    public float Zoom
@@ -1744,6 +1745,14 @@ namespace Graph
 				}
 				if (DragElement != null)
 				{
+				    if (HoverElement == null)
+				    {
+				        if (ConnectionDropped != null)
+				        {
+				            var args = new AcceptElementLocationEventArgs(DragElement, e.Location);
+                            ConnectionDropped(this, args);
+				        }
+				    }
 					switch (DragElement.ElementType)
 					{
 						case ElementType.InputConnector:

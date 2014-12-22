@@ -67,6 +67,7 @@ namespace GraphNodes
 			graphControl.ConnectionAdding	+= new EventHandler<AcceptNodeConnectionEventArgs>(OnConnectionAdding);
 			graphControl.ConnectionRemoving += new EventHandler<AcceptNodeConnectionEventArgs>(OnConnectionRemoved);
 			graphControl.ShowElementMenu	+= new EventHandler<AcceptElementLocationEventArgs>(OnShowElementMenu);
+		    graphControl.ConnectionDropped += OnConnectionDropped;
 
 			graphControl.Connect(colorItem, check1Item);
 		}
@@ -115,6 +116,34 @@ namespace GraphNodes
 				e.Cancel = true;
 			}
 		}
+
+	    void OnConnectionDropped(object sender, AcceptElementLocationEventArgs e)
+	    {
+	        var connector = e.Element as NodeConnector;
+	        if (connector == null)
+	            return;
+	        switch ((connector.ElementType))
+	        {
+                case ElementType.InputConnector:
+	                var nodeFrom = new Node("By Drop");
+	                var itemFrom = new NodeLabelItem("Output", false, true);
+                    nodeFrom.AddItem(itemFrom);
+	                var sz = GraphRenderer.Measure(CreateGraphics(), nodeFrom);
+                    var pt = new PointF(e.Position.X - sz.Width, e.Position.Y);
+                    nodeFrom.Location = pt;
+	                graphControl.AddNode((nodeFrom));
+	                graphControl.Connect(itemFrom.Output, connector);
+	                break;
+                case ElementType.OutputConnector:
+                    var nodeTo = new Node("By Drop");
+	                var itemTo = new NodeLabelItem("Input", true, false);
+                    nodeTo.AddItem(itemTo);
+                    nodeTo.Location = e.Position;
+	                graphControl.AddNode((nodeTo));
+	                graphControl.Connect(connector, itemTo.Input);
+	                break;
+	        }
+	    }
 
 		void OnConnectionAdding(object sender, AcceptNodeConnectionEventArgs e)
 		{
