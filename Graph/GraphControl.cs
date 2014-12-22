@@ -47,6 +47,7 @@ namespace Graph
 		}
 		#endregion
 
+	    public event EventHandler<EventArgs>                        ZoomChanged;
 		public event EventHandler<ElementEventArgs>					FocusChanged;
 		public event EventHandler<AcceptNodeEventArgs>				NodeAdded;
 		public event EventHandler<AcceptNodeEventArgs>				NodeRemoving;
@@ -57,8 +58,23 @@ namespace Graph
 		public event EventHandler<AcceptNodeConnectionEventArgs>	ConnectionRemoving;
 		public event EventHandler<NodeConnectionEventArgs>			ConnectionRemoved;
 
-		#region Grid
-		public bool		ShowGrid					= true;
+        #region Zoom
+	    public float Zoom
+	    {
+	        get { return zoom; }
+	        set
+	        {
+	            if (zoom == value)
+	                return;
+	            zoom = value;
+                if(ZoomChanged != null)
+                    ZoomChanged(this, new EventArgs());
+	        }
+	    }
+        #endregion
+
+        #region Grid
+        public bool		ShowGrid					= true;
 		public float	internalSmallGridStep		= 16.0f;
 		[Description("The distance between the smallest grid lines"), Category("Appearance")] 
 		public float	SmallGridStep
