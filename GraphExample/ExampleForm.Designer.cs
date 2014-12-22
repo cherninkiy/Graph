@@ -125,6 +125,7 @@
             this.label4.Size = new System.Drawing.Size(75, 17);
             this.label4.TabIndex = 9;
             this.label4.Text = "color node";
+            this.label4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ColorNode_MouseDown);
             // 
             // label3
             // 
@@ -135,6 +136,7 @@
             this.label3.Size = new System.Drawing.Size(87, 17);
             this.label3.TabIndex = 8;
             this.label3.Text = "texture node";
+            this.label3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TextureNode_MouseDown);
             // 
             // label2
             // 
@@ -156,6 +158,7 @@
             this.label1.Size = new System.Drawing.Size(78, 17);
             this.label1.TabIndex = 6;
             this.label1.Text = "some node";
+            this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SomeNode_MouseDown);
             // 
             // propertyGrid1
             // 
