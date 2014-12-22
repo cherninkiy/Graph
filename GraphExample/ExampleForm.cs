@@ -70,6 +70,8 @@ namespace GraphNodes
 		    graphControl.ConnectionDropped += OnConnectionDropped;
 
 			graphControl.Connect(colorItem, check1Item);
+
+		    propertyGrid1.SelectedObject = graphControl;
 		}
 
 		void OnImgClicked(object sender, NodeItemEventArgs e)

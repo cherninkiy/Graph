@@ -42,7 +42,13 @@ namespace Graph
 		public GraphControl()
 		{
 			InitializeComponent();
-			this.SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.Opaque | ControlStyles.OptimizedDoubleBuffer | ControlStyles.ResizeRedraw | ControlStyles.Selectable | ControlStyles.UserPaint, true);
+			this.SetStyle(
+                  ControlStyles.AllPaintingInWmPaint
+                | ControlStyles.Opaque
+                | ControlStyles.OptimizedDoubleBuffer
+                | ControlStyles.ResizeRedraw
+                | ControlStyles.Selectable
+                | ControlStyles.UserPaint, true);
 			CompatibilityStrategy = new AlwaysCompatible();
 		}
 		#endregion
@@ -68,6 +74,7 @@ namespace Graph
 	            if (zoom == value)
 	                return;
 	            zoom = value;
+                Refresh();
                 if(ZoomChanged != null)
                     ZoomChanged(this, new EventArgs());
 	        }
