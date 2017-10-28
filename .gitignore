@@ -1,7 +1,7 @@
-/Graph/obj/*
-/Graph/bin/Debug/Graph.dll
-/GraphExample/bin/Debug/Graph.dll
-/GraphExample/bin/Debug/GraphNodes.exe
+/WinFormsGraph/obj/*
+/WinFormsGraph/bin/Debug/*
+/GraphExample/bin/Debug/*
+/GraphExample/bin/Release/*
 /GraphExample/obj/*
 *.suo
 *.pdb

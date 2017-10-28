@@ -1,4 +1,4 @@
-﻿namespace GraphNodes
+﻿namespace WinFormsGraph
 {
 	partial class ExampleForm
 	{
@@ -29,7 +29,7 @@
 		private void InitializeComponent()
 		{
             this.components = new System.ComponentModel.Container();
-            Graph.Compatibility.AlwaysCompatible alwaysCompatible1 = new Graph.Compatibility.AlwaysCompatible();
+            WinFormsGraph.Compatibility.AlwaysCompatible alwaysCompatible1 = new WinFormsGraph.Compatibility.AlwaysCompatible();
             this.showLabelsCheckBox = new System.Windows.Forms.CheckBox();
             this.nodeMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.testMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,7 +40,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.propertyGrid1 = new System.Windows.Forms.PropertyGrid();
-            this.graphControl = new Graph.GraphControl();
+            this.graphControl = new WinFormsGraph.GraphControl();
             this.nodeMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -228,7 +228,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PropertyGrid propertyGrid1;
-        private Graph.GraphControl graphControl;
+        private WinFormsGraph.GraphControl graphControl;
 	}
 }
 

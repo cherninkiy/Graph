@@ -5,8 +5,8 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("GraphExample")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("WinFormsGraph")]
+[assembly: AssemblyDescription("Simple winforms control to create and edit directional graphs")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("cherninkiy")]
 [assembly: AssemblyProduct("WinFormsGraph")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("5daf7e49-644a-445c-baab-8c5303f62fcc")]
+[assembly: Guid("1889d0ed-848d-4ba3-a3d4-beb0b66168b4")]
 
 // Version information for an assembly consists of the following four values:
 //

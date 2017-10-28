@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{382D4FF6-FE2B-4AE9-8FBA-0D5C44C105A7}</ProjectGuid>
+    <ProjectGuid>{5DAF7E49-644A-445C-BAAB-8C5303F62FCC}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GraphNodes</RootNamespace>
-    <AssemblyName>GraphNodes</AssemblyName>
+    <RootNamespace>WinFormsGraph</RootNamespace>
+    <AssemblyName>WinFormsGraph</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -82,9 +82,9 @@
     <None Include="Resources\me_square_small.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Graph\Graph.csproj">
-      <Project>{E4CC63D8-127D-4BC9-80E0-CCB3E9DA06DC}</Project>
-      <Name>Graph</Name>
+    <ProjectReference Include="..\WinFormsGraph\WinFormsGraph.csproj">
+      <Project>{1889D0ED-848D-4BA3-A3D4-BEB0B66168B4}</Project>
+      <Name>WinFormsGraph</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
