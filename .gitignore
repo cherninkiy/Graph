@@ -1,5 +1,6 @@
 /WinFormsGraph/obj/*
 /WinFormsGraph/bin/Debug/*
+/WinFormsGraph/bin/Release/*
 /GraphExample/bin/Debug/*
 /GraphExample/bin/Release/*
 /GraphExample/obj/*

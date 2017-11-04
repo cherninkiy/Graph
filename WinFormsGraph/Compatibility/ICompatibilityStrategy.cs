@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace WinFormsGraph.Compatibility {
+﻿
+namespace WinFormsGraph.Compatibility
+{
 	/// <summary>
 	/// Describes a strategy to compare two node item connectors for a possible connection.
 	/// </summary>
-	public interface ICompatibilityStrategy {
+	public interface ICompatibilityStrategy
+    {
 		/// <summary>
 		/// Determine if two node item connectors could be connected to each other.
 		/// </summary>
